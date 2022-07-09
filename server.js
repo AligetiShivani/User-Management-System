@@ -1,9 +1,10 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
-const bodyparser=require("body-parser")
-const path =require("path");
-
+const bodyparser =require("body-parser")
+const path = require("path");
+const services=require("./server/services/render");
+const connectDB = require("./server/database/connect.js");
 //creating an instance of express app
 const app =express();
 
@@ -12,6 +13,9 @@ dotenv.config({path:"./config.env"});
 
 //log requests
 app.use(morgan("tiny"));
+
+//mongodb connection
+connectDB();
 
 //parse requests to body parser
 app.use(bodyparser.urlencoded({extended:true}))
@@ -23,12 +27,11 @@ app.set("view engine","ejs");
 //loading assests
 app.use('/assets',express.static(path.resolve(__dirname,"assets")))
 const PORT= process.env.PORT;
-app.get('/',(req,res)=>{
-    res.render("index");
-})
-app.get('/addUser',(req,res)=>{
-    res.render("addUser");
-})
+
+//loading routes
+app.use('/',require('./server/routes/router.js'))
+
+
 app.listen(PORT,()=>{
     console.log(`hey i am using PORT ${PORT}`);
 });

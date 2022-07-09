@@ -4,17 +4,25 @@
     width:90%;
     margin:auto;
 }
-.alluser-button button{
+.update-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.alluser-button button,.adduser-button-update button{
     background-color: black;
     border:none;
     padding: 7px 10px;
     border-radius: 3px;
 }
 .alluser-button button:hover{
+    background-color: rgb(90, 159, 187);
+    border-radius: 3px;
+}
+.adduser-button-update button:hover{
     background-color: var(--hover);
     border-radius: 3px;
 }
-.alluser-button button a,.alluser-button button i{
+.alluser-button button a,.alluser-button button i,.adduser-button-update button i,.adduser-button-update button a{
     color:white;
 }
 .new-user-container{

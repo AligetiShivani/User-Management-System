@@ -1,0 +1,49 @@
+<!-- Include header file -->
+<%- include('partials/_header') -%>
+<!-- Include header file -->
+
+<div class="contols-viewpage">
+    <%- include('partials/_updateButtons') -%>
+</div>
+<div class="details-container">
+   <div class="person">
+      <h1><%=user.name%> <%=user.surname%></h1>
+   </div>
+   <div class="view view-name">
+      <p>First Name - </p>
+      <p><%=user.name%></p>
+   </div>
+   <div class="view view-surname">
+      <p>Second Name - </p>
+      <p><%=user.surname%></p>
+   </div>
+   <div class="view view-email">
+      <p>Email - </p>
+      <p><%=user.email%></p>
+   </div>
+   <div class="view view-id">
+      <p>Registered Id - </p>
+      <p><%=user._id%></p>
+   </div>
+   <div class="view view-phone">
+      <p>Phone Number - </p>
+      <p><%=user.phone%></p>
+   </div>
+   <div class="view view-gender">
+      <p>Gender - </p>
+      <p><%=user.gender%></p>
+   </div>
+   <div class="view view-status">
+      <p>Status - </p>
+      <p><%=user.status%></p>
+   </div>
+   <div class="view view-comments">
+      <p>Comments - </p>
+      <p><%=user.comments%></p>
+   </div>
+</div>
+
+
+<!-- Include footer file -->
+<%- include('partials/_footer') -%>
+<!-- Include footer file -->

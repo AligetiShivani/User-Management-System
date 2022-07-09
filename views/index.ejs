@@ -1,5 +1,5 @@
 <!-- Include header file -->
-<%- include('components/_header') -%>
+<%- include('partials/_header') -%>
 <!-- Include header file -->
     <main class="mainapp-section">
         <div class="UserAdd-section">
@@ -7,7 +7,7 @@
                 <span>Users</span>
             </div>
             <div class="UserAdd-button">
-                <button><a href="/" class="add-user"><i class="fa-light fa-plus"></i> add user</a></button>
+                <button><a href="/add_user" class="add-user"><i class="fa-light fa-plus"></i> add user</a></button>
             </div>
         </div>
         <div class="form-div">
@@ -25,27 +25,7 @@
                         </tr>
                    </thead>
                    <tbody>
-                        <tr class="info-row">
-                            <td class="id">1</td>
-                            <td class="name">Username</td>
-                            <td class="email">example@gmail.com</td>
-                            <td class="phone">8776544332</td>
-                            <td class="gender">Male</td>
-                            <td class="status">Active</td>
-                            <td class="action-row">
-                                <div class="action-div">
-                                    <a href="#" class="btn-action btn-view">
-                                        <i class="fa-solid fa-eye"></i>view
-                                    </a>
-                                    <a href="#" class="btn-action btn-update">
-                                        <i class="fa-solid fa-pencil"></i>update
-                                    </a>
-                                    <a class="btn-action btn-delete">
-                                        <i class="fa-solid fa-user-xmark"></i>delete
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>    
+                        <%- include('partials/_showUsers') -%>
                    </tbody>
                </table>
             </form>
@@ -53,6 +33,6 @@
     </main>
 
 <!-- Include footer file -->
-<%- include('components/_footer') -%>
+<%- include('partials/_footer') -%>
 <!-- Include footer file -->
 

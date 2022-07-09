@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Open+Sans&family=PT+Sans&display=swap');
+.contols-viewpage{
+  width: 80%;
+  margin:30px auto;
+}
+.details-container{
+    background-color: black;
+    font-family: 'Barlow', sans-serif;
+    width:80%;
+    margin: auto;
+    color:white;
+    border-radius:10px ;
+    box-shadow: 0px 0px 5px 2px rgb(160, 160, 154);
+    padding: 20px;
+}
+.view{
+    display: flex;
+    margin: 20px;
+}
+.person{
+    text-align: center;
+    color:rgb(255, 102, 102);
+    padding: 20px 0;
+}
+.view p:first-child{
+    color:rgb(208, 208, 255);
+}
+.view p:nth-last-child(1) {
+    color: rgb(211, 255, 107);
+    margin-left: 10px;
+}
